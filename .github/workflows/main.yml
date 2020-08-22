@@ -13,7 +13,7 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          echo Building with password '"${PASSWORD}"'
+          echo Building with password: "${PASSWORD}"
           echo Data was:
           cat data
       - name: Publish
@@ -21,6 +21,6 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          echo Publishing with password '"${PASSWORD}"'
+          echo Publishing with password: "${PASSWORD}"
           echo Data was:
           cat data
