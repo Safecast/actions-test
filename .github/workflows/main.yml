@@ -10,7 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        if: secrets.PASSWORD
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
