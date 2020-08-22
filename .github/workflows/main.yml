@@ -17,7 +17,7 @@ jobs:
           echo Data was:
           cat data
       - name: Publish
-        if: secrets.PASSWORD
+        if: github.repository == 'Safecast/actions-test'
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
