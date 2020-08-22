@@ -18,7 +18,7 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          echo Building with password: "${PASSWORD}" (should be blank on fork)
+          echo Building with password: "${PASSWORD}" "(should be blank on fork)"
           echo Data was:
           cat data
       - name: Publish
@@ -26,6 +26,6 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          echo Publishing with password: "${PASSWORD}"
+          echo Publishing with password: "${PASSWORD}" "(shouldn't happen on fork)"
           echo Data was:
           cat data
